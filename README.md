@@ -1,10 +1,12 @@
 # intelligence_2027_submissions 提交教程
 
-2027 赛季 PIONEER 算法组（视觉组）千行任务提交仓库。
+2027 赛季 PIONEER 算法组（视觉组）千行任务提交仓库
 
 仓库地址：<https://github.com/SCNU-PIONEER-LEARNER/intelligence_2027_submissions>
 
 > 完整流程：安装并配置 Git → 克隆仓库 → 创建个人分支和目录 → 提交并推送 → 发起 Pull Request（PR）。
+
+> 以下教程含有 LLM 辅助创作内容（含人量约15%），经过人工审核校对，可以~~不那么~~放心地食用。
 
 ## 1. 提交规范
 
