@@ -1,0 +1,2 @@
+# intelligence_2027_submissions
+2027赛季PIONEER算法组（视觉组）千行任务提交仓库
