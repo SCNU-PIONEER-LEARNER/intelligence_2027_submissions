@@ -54,6 +54,12 @@ git config --global --list
 git --version  #获取当前git版本号
 ~~~
 
+配置网络代理（如果你的clash或者其它代理软件用的系统端口不是默认的7890，换成你vpn的代理端口）
+
+```bash
+git config --local http.proxy http://127.0.0.1:7890
+```
+
 ### Ubuntu
 
 安装 Git 和 GitHub CLI：
@@ -330,6 +336,20 @@ https://github.com/SCNU-PIONEER-LEARNER/intelligence_2027_submissions.git
 ### Permission denied 或 HTTP 403
 
 这通常表示可以读取仓库，但没有直接推送权限。联系负责人，或按第 6 节使用 Fork。
+
+### Failed to connect to github.com:443 / Could not connect to server
+
+报错输出：
+
+```
+fatal: unable to access 'https://github.com/SCNU-PIONEER-LEARNER/intelligence_2027_submissions.git/': Failed to connect to github.com:443 after 21112 ms: Could not connect to server
+```
+
+执行以下命令修改git的网络代理（如果你的clash或者其它代理软件用的系统端口不是默认的7890，换成你vpn的代理端口）
+
+```bash
+git config --global http.proxy http://127.0.0.1:7890
+```
 
 ### failed to push some refs 或 non-fast-forward
 
