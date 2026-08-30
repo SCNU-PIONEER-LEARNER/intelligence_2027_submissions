@@ -32,16 +32,6 @@ JiaWeisi/
 
 Git 是一个分布式版本控制系统，可以记录代码修改历史、管理不同版本并支持多人协作。~~前提是别让它和 GB2312、GBK 打起来。~~
 
-安装完成后，先配置提交记录中显示的名字和邮箱：
-
-~~~bash
-git config --global user.name "你的名字或 GitHub 用户名"
-git config --global user.email "你的 GitHub 邮箱"
-git config --global --list
-~~~
-
-推荐所有文本文件使用 UTF-8 编码。
-
 ### Windows
 
 从 [Git for Windows 官网](https://git-scm.com/install/windows)下载安装最新版。安装时选择 Git Credential Manager，其余选项不确定时使用默认值或 **Recommended** 选项。
@@ -54,6 +44,14 @@ git config --global --list
 
 ~~~bash
 git --version  #获取当前git版本号
+~~~
+
+配置提交记录中显示的名字和邮箱：
+
+~~~bash
+git config --global user.name "你的名字或 GitHub 用户名"
+git config --global user.email "你的 GitHub 邮箱"
+git config --global --list
 ~~~
 
 配置网络代理（如果你的clash或者其它代理软件用的系统端口不是默认的7890，换成你vpn的代理端口）
@@ -86,7 +84,22 @@ gh auth login
 gh auth status
 ~~~
 
+配置提交记录中显示的名字和邮箱：
+
+~~~bash
+git config --global user.name "你的名字或 GitHub 用户名"
+git config --global user.email "你的 GitHub 邮箱"
+git config --global --list
+~~~
+
 ### WSL2
+
+安装git
+
+```bash
+sudo apt update
+sudo apt install git
+```
 
 如果 Windows 已安装最新版 Git for Windows，可以让 WSL 调用 Windows 的 Git Credential Manager：
 
@@ -95,6 +108,14 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git
 ~~~
 
 如果 Git 安装在其他目录，请按实际路径修改。参考：[Git Credential Manager 的 WSL 文档](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/wsl.md)。
+
+配置提交记录中显示的名字和邮箱：
+
+```bash
+git config --global user.name "你的名字或 GitHub 用户名"
+git config --global user.email "你的 GitHub 邮箱"
+git config --global --list
+```
 
 ## 4. 克隆仓库
 
