@@ -15,9 +15,11 @@
 ~~~text
 JiaWeisi/
 |-- README.md
-|-- CMakeLists.txt
-|-- include/
-+-- src/
+|-- 1.encounter_cpp/
+    |-- 1.1_learn_print.cpp
+    |-- 1.2_data_type.cpp
+|-- 2.CPP_task_code/
+|-- 3.serial_driver/
 ~~~
 
 在 GitHub 的个人分支命名为 `submit/姓名拼音`，例如：`submit/JiaWeisi`。推送至 GitHub 后，通过 Pull Request（PR）申请并入主分支。
