@@ -32,6 +32,8 @@ JiaWeisi/
 
 Git 是一个分布式版本控制系统，可以记录代码修改历史、管理不同版本并支持多人协作。~~前提是别让它和 GB2312、GBK 打起来。~~
 
+以下分别是Windows、Ubuntu、WSL2系统的安装方式，选择与你使用的系统对应的教程操作即可。
+
 ### Windows
 
 从 [Git for Windows 官网](https://git-scm.com/install/windows)下载安装最新版。安装时选择 Git Credential Manager，其余选项不确定时使用默认值或 **Recommended** 选项。
