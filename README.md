@@ -22,7 +22,7 @@ JiaWeisi/
 |-- 3.serial_driver/
 ~~~
 
-在 GitHub 的个人分支命名为 `submit/姓名拼音`，例如：`submit/JiaWeisi`。推送至 GitHub 后，通过 Pull Request（PR）申请并入主分支。
+在 GitHub 的个人分支命名为 `姓名拼音`，例如：`JiaWeisi`。推送至 GitHub 后，通过 Pull Request（PR）申请并入主分支。
 
 如果你已成功注册并配置好 Git、GitHub，可以直接跳至[克隆仓库](#4. 克隆仓库)。
 
@@ -153,14 +153,14 @@ git pull --ff-only origin main  # 拉取最新版本并执行快速合并
 将示例姓名替换为自己的姓名拼音，建议使用大驼峰格式：
 
 ~~~bash
-git switch -c submit/ZhangSan
+git switch -c ZhangSan
 git branch --show-current
 ~~~
 
 此时输出应为自己的分支名，而不是 main。如果以前已经创建过该分支，直接执行以下命令切换至自己的分支：
 
 ~~~bash
-git switch submit/ZhangSan
+git switch ZhangSan
 ~~~
 
 ### 第三步：创建个人目录并放入代码
@@ -213,7 +213,7 @@ git merge origin/main
 确认同步和测试都没有问题后再推送：
 
 ~~~bash
-git push -u origin submit/ZhangSan
+git push -u origin ZhangSan
 ~~~
 
 以后在同一分支继续修改，也应保持“提交自己的修改 → 同步最新 main → 测试 → 推送”的顺序：
@@ -253,12 +253,12 @@ git remote -v
 5. 创建分支并提交自己的修改，然后同步原仓库的最新 main，测试通过后再推送：
 
 ~~~bash
-git switch -c submit/ZhangSan
+git switch -c ZhangSan
 git add ZhangSan
 git commit -m "submit: add ZhangSan's thousand-line task"
 git fetch upstream
 git merge upstream/main
-git push -u origin submit/ZhangSan
+git push -u origin ZhangSan
 ~~~
 
 Fork 模式下，origin 是自己的仓库，upstream 是战队原仓库。
@@ -272,7 +272,7 @@ Fork 模式下，origin 是自己的仓库，upstream 是战队原仓库。
 ~~~text
 base repository: SCNU-PIONEER-LEARNER/intelligence_2027_submissions
 base: main
-compare: submit/你的姓名拼音
+compare: 你的姓名拼音
 ~~~
 
 PR 标题建议使用：
@@ -308,7 +308,7 @@ PR 正文模板：
 不需要关闭 PR，也不需要重新创建分支。在原分支修改后继续提交和推送：
 
 ~~~bash
-git switch submit/ZhangSan
+git switch ZhangSan
 git status
 git add ZhangSan
 git commit -m "fix: address review comments"
@@ -322,7 +322,7 @@ git push
 ~~~bash
 git switch main
 git pull --ff-only origin main
-git switch submit/ZhangSan
+git switch ZhangSan
 git merge main
 git push
 ~~~
@@ -334,7 +334,7 @@ git fetch upstream
 git switch main
 git merge --ff-only upstream/main
 git push origin main
-git switch submit/ZhangSan
+git switch ZhangSan
 git merge main
 git push
 ~~~
