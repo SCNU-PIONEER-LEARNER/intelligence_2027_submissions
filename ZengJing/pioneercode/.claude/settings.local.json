@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(g++ 1.3.1task.cpp -o /tmp/task131.exe -std=c++17)",
+      "Bash(echo \"EXIT=$?\")"
+    ]
+  }
+}
