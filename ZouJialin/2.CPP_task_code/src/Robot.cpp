@@ -28,7 +28,6 @@ bool Robot::Survive() const
 
 void Robot::Hit(Building& target)
 {
-    // 命中率判定：rand()/RAND_MAX 得到一个 0~1 的数
     double chance = static_cast<double>(rand()) / RAND_MAX;
     if (chance > hit_rate_)
         return;

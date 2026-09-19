@@ -19,8 +19,8 @@ class Robot
 {
     public:
     Robot(std::string type, int health, int attack, double hit_rate);
-    void Hit(Building& target);   // 攻击建筑物
-    void Hit(Robot& target);      // 攻击机器人（函数重载）
+    void Hit(Building& target);
+    void Hit(Robot& target);
     bool Survive() const;
     int Health_;
 
