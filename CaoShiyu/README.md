@@ -11,6 +11,7 @@
 - [x] 1.4.1 传值调用
 - [x] 1.4.2 引用调用
 - [x] 1.5 类与对象
+- [x] 1.6 Vector
 
 ## 学习记录
 
@@ -49,3 +50,9 @@
 ## 1.5 类与对象
 
 创建了 `Ball` 类和继承它的 `Projectile` 类，通过构造函数初始化弹丸的名称、直径和价格。总经验达到 100 后，程序会随机奖励一种弹丸并输出相关信息。
+
+## 1.6 Vector
+
+In this section, I practised the basic operations of `vector`, including storing, traversing, and deleting elements. I also used vectors to store projectile objects and identify odd, even, and prime numbers.  
+But honestly the DDL is soooo scary
+WILL I FINISH IT TONIGHT???
