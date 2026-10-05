@@ -12,6 +12,8 @@
 - [x] 1.4.2 引用调用
 - [x] 1.5 类与对象
 - [x] 1.6 Vector
+- [x] 2.0 C++ 考核任务
+
 
 ## 学习记录
 
@@ -56,3 +58,10 @@
 In this section, I practised the basic operations of `vector`, including storing, traversing, and deleting elements. I also used vectors to store projectile objects and identify odd, even, and prime numbers.  
 But honestly the DDL is soooo scary
 WILL I FINISH IT TONIGHT???
+
+## 2.0 FIRE THE HOLE
+
+完成了机器人与建筑物对战模拟。这是我第一次接触头文件和多个源文件配合编译，过程中逐渐理解了类的声明与实现分离，也通过编译报错排查了文件引用问题。
+其实我真的有点没看懂
+但是明天醒了应该就懂了
+请伟大的算法组收下我吧！！！plz
