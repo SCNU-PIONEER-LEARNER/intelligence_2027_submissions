@@ -55,6 +55,9 @@ int main(){
                 //划线函数line(image,起点，终点，颜色，线宽)；
                 line(out,pts[i],pts[(i+1)%4],Scalar(0,0,255),2);
             }
+            //绘制中心点
+            circle(out,rect.center,5,Scalar(0,0,255),-1);    //-1为填充满
+
         }
 
         imshow("outline",out);
