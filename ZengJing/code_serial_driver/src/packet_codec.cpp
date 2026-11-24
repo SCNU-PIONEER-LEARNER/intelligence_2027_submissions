@@ -2,6 +2,7 @@
 #include "rm_serial_driver/packet.hpp"
 #include  <cstring>
 #include <string>
+#include "rm_serial_driver/crc.hpp" 
 #include <vector>
 namespace rm_serial_driver
 {
@@ -14,6 +15,14 @@ void PacketCodec::copydata(const uint8_t * data, size_t len)
 }
 bool PacketCodec::decode(ControllerCommand & out)
 {
+  //加点保护性检测
+  while(real_data.size() >= sizeof(ReceivePacket))
+  {
+    if(real_data.front() != 0x5A)
+    {
+      real_data.erase(real_data.begin());
+      continue;
+    }
     //我直接默认receiverpacket是在变化的
     ReceivePacket packet;
     std::memcpy(&packet, real_data.data(), sizeof(packet));
@@ -21,18 +30,14 @@ bool PacketCodec::decode(ControllerCommand & out)
     if (!crc16::Verify_CRC16_Check_Sum(
           reinterpret_cast<const uint8_t *>(&packet), sizeof(packet))) {
        RCLCPP_ERROR(get_logger(), "CRC error!");
-       return false;
+       real_data.erase(real_data.begin());
+       continue;
     }
-    out.detect_color = static_cast<uint8_t>(packet.detect_color);
-    out.task_mode = static_cast<ControllerCommand::Task>(packet.task_mode);
-    out.reset_tracker = packet.reset_tracker;
-    out.change_target = packet.change_target;
-    out.is_play = packet.is_play ;
-    out.roll = packet.roll;
-    out.pitch = packet.pitch;
-    out.yaw = packet.yaw;
-    out.bullet_speed = packet.bullet_speed;
+    real_data.erase(real_data.begin(), real_data.begin() + sizeof(packet));
+    out=packet;
     return true;
+  }
+    return false;
 }
 std::vector<uint8_t> PacketCodec::encode(auto_aim_interfaces::msg::GimbalCmd & cmd, bool is_buff)
 {
